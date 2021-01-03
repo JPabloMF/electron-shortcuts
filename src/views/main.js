@@ -1,10 +1,12 @@
 import React from 'react';
 import TopNav from '../components/topNav';
+import SideNav from '../components/sideNav';
 
-const Main = (props) => {
-  return(
-  	<div>
+const Main = () => {
+  return (
+    <div>
       <TopNav />
+      <SideNav />
     </div>
   );
 }
