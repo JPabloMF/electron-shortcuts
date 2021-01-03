@@ -1,9 +1,10 @@
 import React from 'react';
 import { Dropdown, Menu } from 'semantic-ui-react';
+import { StyledMenu } from './styles';
 
 const TopNav = () => {
   return (
-    <Menu>
+    <StyledMenu>
       <Dropdown item text="File">
         <Dropdown.Menu>
           <Dropdown.Item>Exit</Dropdown.Item>
@@ -75,7 +76,7 @@ const TopNav = () => {
         </Dropdown.Menu>
       </Dropdown>
       <Menu.Item name="Help" />
-    </Menu>
+    </StyledMenu>
   );
 };
 export default TopNav;

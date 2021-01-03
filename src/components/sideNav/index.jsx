@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, Accordion, Icon, Button } from 'semantic-ui-react';
-import { StyledButton } from './styles';
+import { Accordion, Icon, Button } from 'semantic-ui-react';
+import { StyledButton, StyledMenu, StyledAccordion } from './styles';
 
 const SideNav = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -13,8 +13,8 @@ const SideNav = () => {
   };
 
   return (
-    <Menu vertical>
-      <Accordion styled>
+    <StyledMenu vertical>
+      <StyledAccordion styled>
         <Accordion.Title
           active={activeIndex === 0}
           index={0}
@@ -51,8 +51,8 @@ const SideNav = () => {
         <Accordion.Content active={activeIndex === 2}>
           <p>Manager</p>
         </Accordion.Content>
-      </Accordion>
-    </Menu>
+      </StyledAccordion>
+    </StyledMenu>
   );
 };
 
