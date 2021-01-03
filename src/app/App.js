@@ -1,9 +1,10 @@
 import './App.css';
+import Main from '../views/main';
 
 function App() {
   return (
     <div className="App">
-      <p>Initial page</p>
+      <Main />
     </div>
   );
 }
