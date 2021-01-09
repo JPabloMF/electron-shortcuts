@@ -1,7 +1,12 @@
 import React from 'react';
 
 import { Input, Button } from 'semantic-ui-react';
-import { StyledForm, StyledErrorText, StyledInputContainer } from './styles';
+import {
+  StyledForm,
+  StyledErrorText,
+  StyledInputContainer,
+  StyledButtonContainer,
+} from './styles';
 
 const electron = window.require('electron');
 
@@ -32,12 +37,14 @@ const LoginComponent = ({ handleSubmit, handleChange, errors, values }) => {
           <StyledErrorText>{errors.password}</StyledErrorText>
         )}
       </StyledInputContainer>
-      <Button primary type="submit">
-        Sign In
-      </Button>
-      <Button onClick={() => electron.remote.getCurrentWindow().close()}>
-        Exit
-      </Button>
+      <StyledButtonContainer>
+        <Button primary type="submit">
+          Sign In
+        </Button>
+        <Button onClick={() => electron.remote.getCurrentWindow().close()}>
+          Exit
+        </Button>
+      </StyledButtonContainer>
     </StyledForm>
   );
 };
