@@ -1,19 +1,18 @@
 import React from 'react';
-import TopNav from '../components/topNav';
-import SideNav from '../components/sideNav';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import styled from 'styled-components';
-
-const StyledNavContainer = styled.div`
-  /* display: flex; */
-`;
+import SignIn from './signIn';
+import Dashboard from './dashboard';
 
 const Main = () => {
   return (
-    <StyledNavContainer>
-      <TopNav />
-      <SideNav />
-    </StyledNavContainer>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={SignIn} />
+        <Route path="/signin" component={SignIn} />
+        <Route path="/dashboard" component={Dashboard} />
+      </Switch>
+    </Router>
   );
 }
 
