@@ -12,6 +12,10 @@ function createWindow() {
     width: 1920,
     height: 1080,
     show: false,
+    webPreferences: {
+      nodeIntegration: true,
+      enableRemoteModule: true,
+    },
   });
   const startURL = isDev
     ? 'http://localhost:3000'
