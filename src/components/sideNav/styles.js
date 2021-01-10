@@ -8,7 +8,7 @@ export const StyledButton = styled(Button)`
 `;
 
 export const StyledMenu = styled(Menu)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
