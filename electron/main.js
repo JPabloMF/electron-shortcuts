@@ -156,7 +156,7 @@ function createTray() {
   const contextMenu = Menu.buildFromTemplate([
     { label: 'Settings' },
     { label: 'Help' },
-    { label: 'Exit' },
+    { label: 'Exit', click: function(){app.quit();} },
   ]);
   tray.setToolTip('This is my application.');
   tray.setContextMenu(contextMenu);
