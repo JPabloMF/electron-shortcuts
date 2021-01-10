@@ -1,14 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { StyledContainer } from './styles';
+import Card from './components/card';
+import Table from './components/table';
 
-const Home = (props) => {
-  return(
-  	<div>Home</div>
+const Home = () => {
+  return (
+    <StyledContainer>
+      <h1>WELCOME BACK ALEX</h1>
+      <Card />
+      <h2>LAST SAVED ITEMS</h2>
+      <Table />
+    </StyledContainer>
   );
-};
-
-Home.propTypes = {
-  props: PropTypes.object.isRequired
 };
 
 export default Home;
