@@ -1,16 +1,16 @@
 import React from 'react';
-import { StyledContainer } from './styles';
+import { StyledMainContainer } from '../../../components/mainContainer/styles';
 import Card from './components/card';
 import Table from './components/table';
 
 const Home = () => {
   return (
-    <StyledContainer>
+    <StyledMainContainer>
       <h1>WELCOME BACK ALEX</h1>
       <Card />
       <h2>LAST SAVED ITEMS</h2>
       <Table />
-    </StyledContainer>
+    </StyledMainContainer>
   );
 };
 
