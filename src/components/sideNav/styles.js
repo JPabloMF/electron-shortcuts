@@ -12,6 +12,7 @@ export const StyledMenu = styled(Menu)`
   top: 0;
   left: 0;
   height: 100vh;
+  z-index: 10;
   && {
     margin: 0;
     border-radius: 0;
