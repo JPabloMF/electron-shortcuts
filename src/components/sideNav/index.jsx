@@ -3,7 +3,7 @@ import { Accordion, Icon, Button } from 'semantic-ui-react';
 import { StyledButton, StyledMenu, StyledAccordion } from './styles';
 
 const SideNav = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   const handleClick = (_, titleProps) => {
     const { index } = titleProps;
