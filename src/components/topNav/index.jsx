@@ -1,21 +1,28 @@
 import React from 'react';
 import { Dropdown, Menu } from 'semantic-ui-react';
 import { StyledMenu, StyledLink } from './styles';
+import isElectron from 'is-electron';
 
-const electron = window.require('electron');
+let electron;
+
+if (isElectron()) {
+  electron = window.require('electron');
+}
 
 const TopNav = () => {
   return (
     <StyledMenu>
-      <Dropdown item text="File">
-        <Dropdown.Menu>
-          <Dropdown.Item
-            onClick={() => electron.remote.getCurrentWindow().close()}
-          >
-            Exit
-          </Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
+      {isElectron() && (
+        <Dropdown item text="File">
+          <Dropdown.Menu>
+            <Dropdown.Item
+              onClick={() => electron.remote.getCurrentWindow().close()}
+            >
+              Exit
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      )}
       <Dropdown item text="Manager">
         <Dropdown.Menu>
           <Dropdown.Item>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import isElectron from 'is-electron';
 import { Input, Button } from 'semantic-ui-react';
 import {
   StyledForm,
@@ -8,7 +8,11 @@ import {
   StyledButtonContainer,
 } from './styles';
 
-const electron = window.require('electron');
+let electron;
+
+if (isElectron()) {
+  electron = window.require('electron');
+}
 
 const LoginComponent = ({ handleSubmit, handleChange, errors, values }) => {
   return (
@@ -41,9 +45,11 @@ const LoginComponent = ({ handleSubmit, handleChange, errors, values }) => {
         <Button primary type="submit">
           Sign In
         </Button>
-        <Button onClick={() => electron.remote.getCurrentWindow().close()}>
-          Exit
-        </Button>
+        {isElectron() && (
+          <Button onClick={() => electron.remote.getCurrentWindow().close()}>
+            Exit
+          </Button>
+        )}
       </StyledButtonContainer>
     </StyledForm>
   );
