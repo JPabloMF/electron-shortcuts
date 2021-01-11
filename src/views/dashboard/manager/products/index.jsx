@@ -1,14 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { StyledMainContainer } from '../../../../components/mainContainer/styles';
 
-const Products = (props) => {
-  return(
-  	<div>Products</div>
+import HeaderButtons from './components/headerButtons';
+import HeaderForm from './components/headerForm';
+import Tabs from './components/tabs';
+
+const Products = () => {
+  return (
+    <StyledMainContainer>
+      <h1>PRODUCTS</h1>
+      <HeaderButtons />
+      <HeaderForm />
+      <Tabs />
+    </StyledMainContainer>
   );
-};
-
-Products.propTypes = {
-  props: PropTypes.object.isRequired
 };
 
 export default Products;
